@@ -1,7 +1,6 @@
 
 *.zip
 *.exe
-*.cmd
 *.sh
 *.py
 *.jar
