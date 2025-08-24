@@ -1,0 +1,16 @@
+
+*.zip
+*.exe
+*.cmd
+*.sh
+*.py
+*.jar
+*.mp3
+*.mp4
+
+composer.lock
+ted-setup.json
+
+/vendor
+/test
+/test.php

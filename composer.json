@@ -1,0 +1,32 @@
+{
+    "name": "farhang-sa/php-ted-seed",
+    "description": "A seed for building ted applications",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "farhang-sa",
+            "email": "Saeedi.Farhang@gmail.com"
+        }
+    ],
+    
+    "repositories": [
+        {
+            "type": "git" ,
+            "url": "https://github.com/farhang-sa/php-ted-mvc.git"
+        } , {
+            "type": "git" ,
+            "url": "https://github.com/farhang-sa/php-maxtools.git"
+        } 
+    ],
+    
+    "require": {
+        "php": ">=5" ,
+        "farhang-sa/php-ted-mvc" : "dev-main" 
+    } ,
+    
+    "autoload": {
+        "files": [ "App.php" ]
+    }
+}

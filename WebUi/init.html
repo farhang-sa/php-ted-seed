@@ -1,0 +1,26 @@
+<?php defined( 'AppName_Root' ) or die( 'Access Denied' );
+
+$name = 'AppName';
+$desc = 'App describtion';
+$version = 'v0.1';
+$release = '20190305' ;
+$author  = 'Author name';
+$email   = 'Author email';
+
+// html tags
+$html->title( 'App title' );
+$html->keyword( 'AppName , keywords' );
+$html->generator( 'Ted-MVC-v1' );
+$html->charset( 'utf-8' );
+$html->meta( 'viewport' , 'width=device-width, initial-scale=1.0, user-scalable=yes' );
+
+$html->Css( 'bootstrap.min.css' );
+$html->Css( 'AppName.css' );
+
+$html->js2head( 'respond.js' );
+$html->js2head( 'jquery.min.js' );
+
+$html->js2body( 'bootstrap.min.js' );
+$html->js2body( 'AppName.js' );
+
+?>
