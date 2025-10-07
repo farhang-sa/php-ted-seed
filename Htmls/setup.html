@@ -1,0 +1,76 @@
+<?php defined( 'TExec' ) or die( TAccess ); 
+$intel = $App->SilentCall( 'Setup' ) ;
+unset( $intel['AppVersion'] , $intel['AppRelease'] );
+$first = ! file_exists( TPath_Root . TPath_DS . 'ted-setup.json' ); ?>
+<div class="row p-0">
+
+	<?php if ( ! $first ) : ?>
+	
+	<div class="col-12 col-sm-6">
+	
+		<?php $html->Call( 'welcome' ); ?>
+	
+	</div>
+	
+	<div class="col-12 col-sm-6">
+	
+	<?php else : ?>
+	
+	<div class="col-12 col-sm-2"> &#160; </div>
+
+	<div class="col-12 col-sm-8">
+	
+	<?php endif ; ?>
+
+		<div class="row p-0">
+		
+			<div class="col-12 text-center p-0">
+
+				<h3 class="h3 alert alert-success p-5">
+
+					<b><?php print $App->Translate( 'Use this form to customize your app' ) ; ?></b>
+
+				</h3>
+
+			</div>
+		
+			<form class="col-12 setup_confirm_form form" method="post">
+
+				<?php foreach ( $intel as $key => $value ) : 
+					$desc = 'App ' . str_ireplace( 'App' , '' , $key ) ; ?>
+
+				<div class="col-12 p-0">
+							
+					<span class="col-4 pt-4" style="text-align: end;">
+						<?php print $desc; ?>
+					</span>
+					
+					<span class="col-8">
+						<input type="text" 
+							class="input-lg form-control" 
+							placeholder="<?php print $desc; ?>"
+							value="<?php print $value ; ?>" 
+							name="AppIntel[<?php print $key ; ?>]" />
+
+					</span>
+							
+				</div>
+
+				<?php endforeach ; ?>
+
+				<div class="col-12"> &#160; </div>
+
+				<div class="col-12">
+
+					<input type="submit" value="<?php print $App->Translate( 'Save' ) ; ?>" 
+						class="btn btn-lg btn-success" style="font-size:20px;">
+
+				</div>
+
+			</form>
+
+		</div>
+	
+	</div>
+
+</div>
